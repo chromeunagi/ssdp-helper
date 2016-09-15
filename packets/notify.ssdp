@@ -1,0 +1,8 @@
+NOTIFY * HTTP/1.1
+NT:upnp:rootdevice
+NTS:ssdp:update
+LOCATION:http://192.168.0.5/upnp/BasicDevice.xml
+USN:uuid:b90a8986-66dd-4b96-8400-7d317be4b84c::upnp:rootdevice
+CACHE-CONTROL:max-age=1230
+SERVER: Darwin/15.6.0 UPnP/1.0 TestProduct/5.5
+EXT:

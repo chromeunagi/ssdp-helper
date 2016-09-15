@@ -1,0 +1,25 @@
+SSDP TESTING TOOLS
+------------------
+
+0. Summary
+This package was built with the goal to simplify the testing of SSDP. There
+are several components to this utility: generate.py, listen.py, and send.py.
+
+1. Generating SSDP packets
+generate.py is used to generate the packets required for SSDP. When run, a
+MSEARCH packet and a NOTIFY packet are generated and written to the packet
+folder. The NOTIFY packet is built using this system's real OS and OS version,
+so there's no "lying" to the network involved. Every time generate.py is run,
+a new advertisement UUID is generated.
+
+2. Listening in on the network
+listen.py listens in on the multicast network and collects any packets that it
+detects. Detected packets are immediately printed to standard output. The first
+argument is the amount of seconds that the program should listen in on the
+multicast address. The second argument is the output file. If a target file
+for output was provided, all collected messages will be written to the file.
+
+3. Writing onto the network
+send.py sends packets over the multicast network. There are three ways to use
+send.py: sending notify packets, sending msearch packets, and sending custom
+packets that can be built on the fly.
